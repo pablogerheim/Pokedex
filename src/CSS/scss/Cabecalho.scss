@@ -1,0 +1,39 @@
+.cabecalho {
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    &__ferramenta {
+        &__titulo {
+            font-size: 50px;
+        }
+    }
+
+    &__procura {
+        width: 30%;
+        display: flex;
+        justify-content: left;
+        padding: 0.5% 3% 0.5% 1%;
+        border-radius: 20px;
+        background: rgb(240, 239, 239);
+
+        &__entrada {
+            border: hidden;
+            background: rgb(240, 239, 239);
+
+            &::placeholder {
+                color: rgb(194, 192, 192);
+            }
+        }
+
+        &__icone {
+            background-image: url("http://www.devmedia.com.br/imagens/2013/buscar_grey.png");
+            background-repeat: no-repeat;
+            width: 25px;
+            height: 26px;
+            border-radius: 360px;
+            border: hidden
+        }
+    }
+}

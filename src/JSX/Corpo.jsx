@@ -1,6 +1,6 @@
 import '../CSS/Reset.css'
-import  image  from "../IMG/doguito.svg";
-import "../CSS/Corpo.css"
+import image from "../IMG/doguito.svg";
+import "../CSS/scss/style.css"
 
 function Corpo() {
     const info = {
@@ -92,23 +92,23 @@ function Corpo() {
     return (
         <main className='principal'>
             {info.pokedex.map((cartao) => (
-                <div className="cartao">
-                    <img alt='imagen do pokemon' src={image} className="cartao__image"></img>
-                    <div className="cartao__conteudo">
-                        <h2 className="cartao__titulo">{cartao.titulo}</h2>
-                        <div className="cartao__caracteristica">
-                            <p className="cartao__caracteristica__cada" > {cartao.caracteristica1}</p>
-                            <p className="cartao__caracteristica__cada" > {cartao.caracteristica2}</p>
+                <div className="principal__cartao">
+                    <img src={image} className="principal__cartao__image"></img>
+                    <div className="principal__cartao__conteudo">
+                        <h2 className="principal__cartao__titulo">{cartao.titulo}</h2>
+                        <div className="principal__cartao__caracteristica">
+                            <p className="principal__cartao__caracteristica__cada" > {cartao.caracteristica1}</p>
+                            <p className="principal__cartao__caracteristica__cada" > {cartao.caracteristica2}</p>
                         </div>
-                        <p className="cartao__id">{cartao.id}</p>
+                        <p className="principal__cartao__id">{cartao.id}</p>
                     </div>
                 </div>
-
             ))}
         </main>
     )
 }
 export { Corpo }
+
 
 
 
