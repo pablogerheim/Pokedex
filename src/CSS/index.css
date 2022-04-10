@@ -1,97 +1,14 @@
-body{
-    display:grid ;
-    grid-template-rows: 10% 80% 10%;
-    grid-template-columns: 100%;
-    height: 100vh;
-    padding: 0% 10%;
-
-}
-header{
-    padding: 10px;  
-    display:flex;
-    align-items: center;
-    justify-content: space-between;
-}
-.toolbar__title{
-    font-size: 50px;
-}
-.search{
-    width: 30%;
-    display: flex;
-    justify-content: left;
-    padding: 0.5% 3% 0.5% 1%;
-    border-radius: 20px;
-    background: rgb(240, 239, 239);
-}
-.search__input{
-    border:hidden;
-    background: rgb(240, 239, 239);
-}
-.search__input::placeholder {
-color:rgb(194, 192, 192);
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  
 }
 
-.search__icon{
-    margin: 0% 1%;
-}
-main{
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr 1fr;    
-}
-.card__item{
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    background: rgb(44, 225, 176);
-    border-radius: 10px;
-    padding: 1% 3%;
-    margin: 1% 3%;
-    color:whitesmoke;
-
-}
-.card__image{
-width: 25%;
-align-items: left;
-}
-.card__title{
-    font-size: 30px;
-    margin: 0px 20px 10px 0px;
-}
-.card__features{
-    display:grid;
-    grid-template-columns: 45% 45%;
-    padding: 5% 5%;
-    justify-content: space-between;
-}
-.card__features__each{
-    border-radius: 15px;
-    display: flex;
-    justify-content: center;
-    padding: 5px 5px;
-    background: rgb(96, 231, 204);
-}
-.card__id{
-    padding: 5px 0px;
-}
-.pagination{
-    display:flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.page--active{
-    border-radius: 365px;
-    border:hidden;
-    background: rgb(191, 139, 191);
-    color: rgb(255, 255, 255);
-}
-span{
-    color: rgb(159, 159, 159);
-}
-.page, .page__back, .page__next{
-    border:hidden;
-    padding:0px 20px;
-    background: white;
-    color: rgb(159, 159, 159);
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
 }

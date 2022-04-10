@@ -1,0 +1,48 @@
+.paginas {
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin: 0.5% 25%;
+}
+
+.pagina--ativa {
+    border-radius: 100%;
+    border: hidden;
+    background: rgb(90, 38, 129);
+    color: rgb(255, 255, 255);
+    padding: 8px 12px;
+    margin: 15px;
+}
+
+span {
+    color: rgb(159, 159, 159);
+}
+
+.pagina {
+    border-radius: 100%;
+    margin: hidden;
+    border: hidden;
+    padding: 1% auto;
+    margin: 0%;
+    background: rgb(255, 255, 255);
+    color: rgb(129, 129, 129);
+}
+
+.pagina__proximo {
+    border-radius: 360%;
+    border: hidden;
+    padding: 8px;
+    margin: 15px;
+    background: url('../IMG/setaR.png') no-repeat bottom center scroll;
+    background-size: cover;
+}
+
+.pagina__voltar {
+    border-radius: 360%;
+    border: hidden;
+    padding: 8px;
+    margin: 15px;
+    background: url('../IMG/setaL.png') no-repeat bottom center scroll;
+    background-size: cover;
+}
