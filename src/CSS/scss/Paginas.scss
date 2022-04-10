@@ -1,42 +1,46 @@
 .paginas {
+    @include for-phone-only {
+        width: 80%;
+        margin: 0.5% 10%;
+    }
+    width: 50%;
     display: flex;
     align-items: center;
-    justify-content: center;
-    margin: 30px 0px;
-
-    &__cada{
-        border-radius: 365%;
+    justify-content: space-around;
+    margin: 0.5% 25%;
+    &__cada {
+        border-radius: 100%;
         margin: hidden;
         border: hidden;
-        padding: 8px auto;
-        margin: 15px;
+        padding: 1% auto;
+        margin: 0%;
         background: rgb(255, 255, 255);
         color: rgb(129, 129, 129);
-
         &--ativa {
-            border-radius: 360%;
+            @include for-phone-only {
+                padding: 1%;
+                margin: 1%;
+            }
+            border-radius: 100%;
             border: hidden;
             background: rgb(90, 38, 129);
             color: rgb(255, 255, 255);
             padding: 8px 12px;
             margin: 15px;
         }
-
         &__span {
             color: rgb(159, 159, 159);
         }
-
         &__voltar {
-            border-radius: 360%;
+            border-radius: 100%;
             border: hidden;
             padding: 8px;
             margin: 15px;
             background: url('../../IMG/setaL.png') no-repeat bottom center scroll;
             background-size: cover;
         }
-
         &__proximo {
-            border-radius: 360%;
+            border-radius: 100%;
             border: hidden;
             padding: 8px;
             margin: 15px;

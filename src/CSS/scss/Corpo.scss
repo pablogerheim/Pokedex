@@ -1,9 +1,18 @@
 .principal {
+    @include for-phone-only{
+        grid-template-columns: 1fr;
+    }
+    @include for-tablet-only{
+        grid-template-columns: 1fr 1fr;
+    }
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr 1fr;
 
     &__cartao {
+        @include for-phone-only{
+            margin:2% 4%;
+        }
         display: flex;
         align-items: center;
         justify-content: space-around;

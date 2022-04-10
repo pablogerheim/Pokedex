@@ -9,12 +9,11 @@ function Cabecalho() {
                 <h1 className="cabecalho__ferramenta__titulo" >Pokedex</h1>
             </div>
             <div className="cabecalho__procura">
-                <button class="cabecalho__procura__icone">
-
-                </button>
-                <input type="text" placeholder="Search Pokemon" className="cabecalho__procura__entrada" />
+                <button className="cabecalho__procura__icone"></button>
+                <input placeholder="Search Pokemon" className="cabecalho__procura__entrada" />
             </div>
         </header>
+
     )
 }
 export { Cabecalho }

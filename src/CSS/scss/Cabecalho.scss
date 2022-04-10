@@ -4,13 +4,32 @@
     align-items: center;
     justify-content: space-between;
 
+    @include for-phone-only {
+        display: grid;
+        grid-template-columns: 70%;
+        width: 100%;
+        padding: 10px 0px;
+        justify-content: space-around;
+    }
+
     &__ferramenta {
         &__titulo {
             font-size: 50px;
+            padding: auto;    
+
+            @include for-phone-only {
+                padding-bottom: 10px;
+            }
         }
     }
 
     &__procura {
+        @include for-phone-only{
+            width: 100%;
+        }
+        @include for-tablet-only{
+            padding: 0.5% 10% 0.5% 1%;
+        }
         width: 30%;
         display: flex;
         justify-content: left;
@@ -19,6 +38,10 @@
         background: rgb(240, 239, 239);
 
         &__entrada {
+            @include for-phone-only{
+                width: 90%;
+                border-radius: 100%;
+            }
             border: hidden;
             background: rgb(240, 239, 239);
 
@@ -28,12 +51,22 @@
         }
 
         &__icone {
+            @include for-phone-only{
+                padding: 1rem;
+                
+            }
+            @include for-tablet-only{
+                padding: 8%;
+            }
+            background-position: center;
             background-image: url("http://www.devmedia.com.br/imagens/2013/buscar_grey.png");
             background-repeat: no-repeat;
             width: 25px;
             height: 26px;
             border-radius: 360px;
-            border: hidden
+            border: hidden 
+            
+
         }
     }
 }

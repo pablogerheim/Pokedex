@@ -1,5 +1,35 @@
-.body{
-    padding: 0% 15%;
+
+
+
+@mixin for-phone-only {
+    @media (max-width: 600px) { @content; }
 }
 
+@mixin for-tablet-only {
+    @media (min-width: 601px) and (max-width: 920px) { @content; }
+}
+
+@mixin for-tablet_desk {
+    @media (min-width: 921px) and (max-width: 1200px) { @content; }
+}
+
+@mixin for-tablet_desk-plus {
+    @media (min-width: 1201px) and (max-width: 1536px) { @content; }
+}
+
+@mixin for-desktop-only {
+    @media (min-width: 1537px) { @content; }
+}
+
+
 @import 'Cabecalho', 'Corpo','Paginas';
+
+.body{
+    padding: 0% 15%;
+    @include for-phone-only{
+        padding: 0px;
+    }
+    @include for-tablet-only{
+        padding: 5%;
+    }
+}
