@@ -12,6 +12,7 @@
         justify-content: space-around;
     }
 
+
     &__ferramenta {
         &__titulo {
             font-size: 50px;
@@ -32,7 +33,7 @@
         }
         width: 30%;
         display: flex;
-        justify-content: left;
+        justify-content: right;
         padding: 0.5% 3% 0.5% 1%;
         border-radius: 20px;
         background: rgb(240, 239, 239);
@@ -41,6 +42,7 @@
             @include for-phone-only{
                 width: 90%;
                 border-radius: 100%;
+
             }
             border: hidden;
             background: rgb(240, 239, 239);
