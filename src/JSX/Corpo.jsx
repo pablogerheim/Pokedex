@@ -1,14 +1,19 @@
 import '../CSS/Reset.css'
 import image from "../IMG/doguito.svg";
 import "../CSS/scss/style.css"
+import ClipLoader from "react-spinners/ClipLoader";
 
 function Corpo({
     dataProp = ''
 }) {
-    if (dataProp.length === 0) { return console.log("houve um erro na API") }
+
+
+
+    if (dataProp.length === 0) { return <div> <ClipLoader/></div> }
     return (
         <main className='principal'>
-            {dataProp.map((cartao) => (
+            {dataProp.map((cartao,i) => {
+                if(i<=12){(
                 <div key={cartao.id} className="principal__cartao">
                     <img src={image} className="principal__cartao__image"></img>
                     <div className="principal__cartao__conteudo">
@@ -20,7 +25,7 @@ function Corpo({
                         <p className="principal__cartao__id">{cartao.id}</p>
                     </div>
                 </div>
-            ))}
+            )}})}
         </main>
     )
 }

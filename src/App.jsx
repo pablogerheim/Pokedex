@@ -1,4 +1,3 @@
-import React from 'react';
 import { Cabecalho } from './JSX/Cabecalho';
 import { Corpo } from './JSX/Corpo.jsx';
 import { Paginas } from "./JSX/Paginas";
@@ -30,7 +29,9 @@ function App() {
             <Cabecalho
                 onSearchange={handlefilter} />
             <Corpo dataProp={data} />
-            <Paginas />
+            <Paginas
+             dataLength={data.length}
+             page={page} />
         </>
     )
 }
