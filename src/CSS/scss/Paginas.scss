@@ -25,9 +25,8 @@
             border: hidden;
             background: rgb(90, 38, 129);
             color: rgb(255, 255, 255);
-            padding: 8px 12px;
-            margin: 15px;
-        }
+            padding: 6px 8px;
+                    }
         &__span {
             color: rgb(159, 159, 159);
         }
@@ -36,7 +35,7 @@
             border: hidden;
             padding: 8px;
             margin: 15px;
-            background: url('../../IMG/setaL.png') no-repeat bottom center scroll;
+            background: url('../../Img/setaL.png') no-repeat bottom center scroll;
             background-size: cover;
         }
         &__proximo {
@@ -44,7 +43,7 @@
             border: hidden;
             padding: 8px;
             margin: 15px;
-            background: url('../../IMG/setaR.png') no-repeat bottom center scroll;
+            background: url('../../Img/setaR.png') no-repeat bottom center scroll;
             background-size: cover;
         }
     }
