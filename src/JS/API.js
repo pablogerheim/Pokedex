@@ -1,23 +1,25 @@
-//import axios from 'axios'
 
-// export const api = axios.create({
-//     baseURL: 'http://localhost:5000'
-// })
 
-// export const Pokemons = async(url) => {
-//     const reposta = await api.get(url)
-//     return reposta.data
-// }
+import axios from 'axios'
+let pokedexArr = []
 
-// function fetchJson(url) { return fetch(url).then((r) => { return r.json() }) }
+async function pokemonAPI(offset=0) {
+    let URLs = []
+    let data = await axios.get(`https://pokeapi.co/api/v2/pokemon?offset=${offset}&limit=12`)
+    let data1= data.data.results 
+    data1.map(item => {pokedexArr.push(item.name),URLs.push(item.url) })
 
-// async function api() {
-//     let pokemons = await fetchJson('https://pokeapi.co/api/v2/pokemon/ditto')
+  return data.data.results 
+}
 
-// }
-// api()
+console.log(pokemonAPI())
+
+
 
 //https://kitsu.io/api/edge/anime/1
+
+
+
 
 function Rapi() {
 

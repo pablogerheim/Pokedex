@@ -1,0 +1,27 @@
+https://pokeapi.co/api/v2/pokemon?offset=20&limit=20
+[
+{name:xxx, URL :"https://pokeapi.co/api/v2/pokemon/1/"}
+{}
+...limit
+]
+
+https://pokeapi.co/api/v2/pokemon/1/
+[
+name:"bulbasaur"
+order:1
+species:{url:pegar a cor "https://pokeapi.co/api/v2/pokemon-species/1/"}
+sprites{other:{dream_word:{front_default: 	"https://raw.githubuserco…/other/dream-world/1.svg"}}}
+types:[{type:{name:grass}},{type:{name:poison}}]
+]
+
+"https://pokeapi.co/api/v2/pokemon-species/1/
+[
+{color:{name:}}
+]
+
+
+data.map(item => item.name , item.order, types.map(item => item.type.name), item.sprites.other.dream_word.front_default, item.species.url )
+
+item.species.url => item.color.name
+
+treinan props e ver o metodo que o gabs mandou
