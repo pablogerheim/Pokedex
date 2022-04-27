@@ -11,7 +11,7 @@ function Paginas({
     const [numeropaginas, setNumeropaginas] = useState([])
     useEffect(() => {
         if (dataLength > 0) {
-            let auxilioPaginas = (dataLength / 12).toFixed(1) -1
+            let auxilioPaginas = (dataLength / 12).toFixed(1) - 1
             let arrNumeropaginas = []
             for (let i = 0; i < auxilioPaginas; i++) { arrNumeropaginas.push(i + 1) }
             setNumeropaginas(arrNumeropaginas)

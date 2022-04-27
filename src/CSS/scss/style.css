@@ -91,7 +91,6 @@
   display: flex;
   align-items: center;
   justify-content: space-around;
-  background: #2ce1b0;
   border-radius: 10px;
   padding: 4% 3%;
   margin: 4% 4%;
@@ -118,12 +117,11 @@
   justify-content: space-between;
 }
 .principal__cartao__caracteristica__cada {
-  border-radius: 25%;
+  border-radius: 15%;
   font-size: 10px;
   display: flex;
-  justify-content: flex-end;
+  justify-content: space-around;
   padding: 3px 12px;
-  background: #52dfc3;
 }
 .principal__cartao__id {
   padding: 25px 0px;
