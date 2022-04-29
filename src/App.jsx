@@ -24,8 +24,9 @@ function App() {
     }, [pagina, datalength])
 
     async function dataFilter(filter) {
-        setTimeout(() => {
-            setData(pokeAPIsearch(filter))
+        console.log(filter)
+        setTimeout(async() => {
+            setData( await pokeAPIsearch(filter))
         }, 700);
     }
 

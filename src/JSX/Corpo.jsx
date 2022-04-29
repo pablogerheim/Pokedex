@@ -17,7 +17,7 @@ function Corpo({
             <div key={id} style={{backgroundColor:color}} className="principal__cartao">
                 <img src={image} className="principal__cartao__image"></img>
                 <div className="principal__cartao__conteudo">
-                    <p className="principal__cartao__titulo">{titulo}</p>
+                    <p className="principal__cartao__titulo">{titulo[0].toUpperCase() + titulo.substr(1)}</p>
                     <div className="principal__cartao__caracteristica">
                         {types.map(type => {return <p key={v4()} className="principal__cartao__caracteristica__cada">{type.type.name[0].toUpperCase() + type.type.name.substr(1)}</p>})}
                     </div>
@@ -26,7 +26,7 @@ function Corpo({
             </div>
         )
     }
-
+    console.log(dataProp)
     if (dataProp.length === 0 || dataProp.length === "") { return <div> <ClipLoader /></div> }
     return (
         <main className='principal'>

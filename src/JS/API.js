@@ -31,6 +31,7 @@ async function pokeAPIbase() {
 async function pokeAPIsearch(serach = '') {
     if (serach === '') { return pokeAPIpage(0) }
     else {
+        console.log(serach)
         let URLs = []
         let pokeBaseSearch = await axios.get(`https://pokeapi.co/api/v2/pokemon?limit=${dataLength}`).then(res => res.data.results)
         let filtred = pokeBaseSearch.filter(({ name }) => name.toLocaleLowerCase().includes(serach.toLocaleLowerCase()))
