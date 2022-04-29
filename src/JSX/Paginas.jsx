@@ -5,7 +5,7 @@ import { v4 } from "uuid"
 
 function Paginas({
     dataLength = 0,
-    pagina = 0,
+    pagina = 1,
     onSelectpage = null
 }) {
     const [numeropaginas, setNumeropaginas] = useState([])

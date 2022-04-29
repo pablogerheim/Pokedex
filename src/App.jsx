@@ -21,13 +21,15 @@ function App() {
         let offset = (pagina - 1) * 12
         async function buscaPagina() { setData(await pokeAPIpage(offset)) }
         buscaPagina()
-    }, [pagina, datalength])
+    }, [pagina])
 
     async function dataFilter(filter) {
-        console.log(filter)
         setTimeout(async() => {
-            setData( await pokeAPIsearch(filter))
-        }, 700);
+            let {pokedexArr, filterLength} = await pokeAPIsearch(filter)
+            setData(pokedexArr )
+            setDatalength(filterLength)
+            if(filter === ''){ setPagina(1)}
+        }, 300);
     }
 
     return (
