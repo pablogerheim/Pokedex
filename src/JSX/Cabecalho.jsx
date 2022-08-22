@@ -1,30 +1,52 @@
 import '../CSS/Reset.css'
 import "../CSS/scss/style.css"
-import { FcSearch } from "react-icons/fc";
-import { useState } from 'react'
+import { FcSearch } from "react-icons/fc"
+import { useState, useEffect } from 'react'
+import EventBus from "../JS/eventBus"
 
 function Cabecalho({
-    onSearchange = null
+    dataFilter = null
 }) {
     const [valueSearch, setValueSearch] = useState('')
-    function controleFiltro(params) {
-        onSearchange(params)
+
+    useEffect(() => {
+        EventBus.on("search", () => {
+            setValueSearch('')
+        });
+    });
+
+    useEffect(() => {
+        EventBus.remove("search");
+    }, [valueSearch]);
+
+    function controleEntrada(params){
+        dataFilter(params)
+        setValueSearch(params)
     }
+
     return (
-        <header className='cabecalho'>
-            <div className="cabecalho__ferramenta">
-                <h1 className="cabecalho__ferramenta__titulo" >Pokedex</h1>
-            </div>
-            <div className="cabecalho__procura">
-                <button onClick={() => controleFiltro(valueSearch)} style={{ border: "none", cursor: "pointer"}}>
-                    <FcSearch className='cabecalho__procura__icone' />
-                </button>
-                <input type='search'
-                    onChange={evt => {controleFiltro(evt.target.value);setValueSearch(evt.target.value)}}
-                    placeholder="Search Pokemon"
-                    className="cabecalho__procura__entrada" />
-            </div>
-        </header>
-    )
+      <header className="cabecalho">
+        <div className="cabecalho__ferramenta">
+          <h1 className="cabecalho__ferramenta__titulo">Pokedex</h1>
+        </div>
+        <div className="cabecalho__procura">
+          <button
+            onClick={() => controleEntrada(valueSearch)}
+            style={{ border: "none", cursor: "pointer" }}
+          >
+            <FcSearch className="cabecalho__procura__icone" />
+          </button>
+          <input
+            type="search"
+            onChange={(evt) => {
+              controleEntrada(evt.target.value);
+            }}
+            value={valueSearch}
+            placeholder="Search Pokemon"
+            className="cabecalho__procura__entrada"
+          />
+        </div>
+      </header>
+    );
 }
 export { Cabecalho }

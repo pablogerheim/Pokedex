@@ -1,6 +1,7 @@
 import axios from 'axios'
 
 async function pokeAPIpage(offset = 0) {
+    let pokedexArr = []
     let URLs = await axios.get(`https://pokeapi.co/api/v2/pokemon?offset=${offset}&limit=12`)
         .then(res => res.data.results)
         .then(res => res.map(({ url }) => url))
@@ -9,8 +10,8 @@ async function pokeAPIpage(offset = 0) {
     let pokeColor = await Promise.all(URLs.map(url => axios.get(url.replace("pokemon", "pokemon-species"))
         .then(res => res.data.color.name)))
 
-    let pokedexArr = pokeInfo.map((item, i) => {
-        let image = item.sprites.other.dream_world.front_default === null ? "../img/doguito.svg" : item.sprites.other.dream_world.front_default
+    pokedexArr = pokeInfo.map((item, i) => {
+        let image = item.sprites.other.dream_world.front_default === null ? "../Img/pokemon.png" : item.sprites.other.dream_world.front_default
         return ({
             "color": pokeColor[i],
             "id": item.order,
@@ -19,7 +20,7 @@ async function pokeAPIpage(offset = 0) {
             "types": item.types
         })
     })
-    return pokedexArr
+    return pokedexArr 
 }
 
 let dataLength = 0
@@ -42,7 +43,7 @@ async function pokeAPIsearch(serach = '') {
 
         if (filtred.length === 0) { pokedexArr = "Não encontrado"; filterLength = 0 }
         else {
-            filtred.map(item => {
+            filtred.forEach(item => {
                 let url = item.url;
                 if (URLs.length <= 11 && url.length < 39) {
                     URLs.push(url)
@@ -52,8 +53,7 @@ async function pokeAPIsearch(serach = '') {
             let pokeColor = await Promise.all(URLs.map(url => axios.get(url.replace("pokemon", "pokemon-species")).then(res => res.data.color.name)))
 
             pokedexArr = pokeInfo.map((item, i) => {
-                console.log(item.sprites.other.dream_world.front_default)
-                let image = item.sprites.other.dream_world.front_default === null ? "../Img/doguito.svg" : item.sprites.other.dream_world.front_default
+                let image = item.sprites.other.dream_world.front_default === null ? "../Img/pokemon.png" : item.sprites.other.dream_world.front_default
                 return ({
                     "color": pokeColor[i],
                     "id": item.order,
@@ -67,4 +67,8 @@ async function pokeAPIsearch(serach = '') {
     return { pokedexArr, filterLength }
 }
 
-export { pokeAPIpage, pokeAPIsearch, pokeAPIbase }
+export {
+    pokeAPIpage,
+    pokeAPIsearch,
+    pokeAPIbase
+}

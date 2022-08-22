@@ -1,7 +1,8 @@
 import '../CSS/Reset.css'
-import "../CSS/scss/style.css";
+import "../CSS/scss/style.css"
 import { useState, useEffect } from 'react'
 import { v4 } from "uuid"
+import EventBus from "../JS/eventBus"
 
 function Paginas({
     dataLength = 0,
@@ -24,6 +25,9 @@ function Paginas({
     }
     function controlePagina(params) {
         onSelectpage(params)
+        setTimeout(() => {
+            EventBus.dispatch("search", {})
+        }, 0);
     }
 
     function paginacao() {

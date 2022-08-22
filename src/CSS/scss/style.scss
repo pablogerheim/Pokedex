@@ -1,5 +1,3 @@
-//abrir cmd na pasta scss e rodar -> npx sass --watch style.scss:style.css
-
 
 @mixin for-phone-only {
     @media (max-width: 600px) { @content; }
