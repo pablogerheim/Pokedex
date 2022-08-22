@@ -4,6 +4,9 @@ Função:
 - Apresentar os pokemons em formato de cards 
 - Para facilicar essa procura há um campo de busca, tambem é pssivel navegar entre as paginas
 
+
+![Ilustrando](https://user-images.githubusercontent.com/90703690/185826707-20e00eb3-477a-4052-af93-41665a6cc00c.png)
+
 ## 🚧 Em Desenvolvimento
 
 Tratamento de Erros
