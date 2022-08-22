@@ -16,9 +16,7 @@ Com Docker -
 
 Sem Docker -
 
-Ao abrir o projeto deve-se abrir o terminal:
-
-Terminal 1:
+Ao abrir o projeto deve-se digitar no terminal:
 
 - `Npm i`
 - `Npm start`
