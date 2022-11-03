@@ -2,16 +2,15 @@ import '../CSS/Reset.css'
 import "../CSS/scss/style.css"
 import { v4 } from "uuid"
 import ClipLoader from "react-spinners/ClipLoader"
+import {  Icorpo, Idata} from "../types/types";
 
-function Corpo({
-    dataProp = ''
-}) {
-    if (dataProp === {}) { return (
+function Corpo({ dataProp }:Icorpo) {
+    if (dataProp === undefined) { return (
     <div className='principal'>
       <h1 > Request failed with status code 404</h1>
     </div>)
   }
-      function imprime({ color, id, image, titulo, types }, i) {
+      function imprime({ color, id, image, titulo, types }:Idata, i:number) {
         function bk_p() {
           color =
             dataProp[i].color === "white"
@@ -79,11 +78,11 @@ function Corpo({
           </div>
         );
       }
-    if(dataProp === "Não encontrado"){return <div className='clipLoader'> Não encontrado</div> }
-    if (dataProp.length === 0 || dataProp.length === "") { return <div className='clipLoader'> <ClipLoader /></div> }
+    if(dataProp === undefined){return <div className='clipLoader'> Não encontrado</div> }
+    if (dataProp.length === 0 || dataProp.length === undefined) { return <div className='clipLoader'> <ClipLoader /></div> }
     return (
-        <main className='principal'>
-            {dataProp.map((cartao,i) => imprime(cartao,i))}
+        <main className={`principal ${'overflow'}`}>
+            {dataProp.map((cartao, i) => imprime(cartao, i))}
         </main>
     )
 }

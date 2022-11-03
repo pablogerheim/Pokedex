@@ -2,28 +2,29 @@ import '../CSS/Reset.css'
 import "../CSS/scss/style.css"
 import { useState, useEffect } from 'react'
 import { v4 } from "uuid"
-import EventBus from "../JS/eventBus"
+import EventBus from "../helper/EventBus"
+import { Ipaginas } from "../types/types";
 
 function Paginas({
-    dataLength = 0,
+    dataLength = 1 ,
     pagina = 1,
-    onSelectpage = null
-}) {
-    const [numeropaginas, setNumeropaginas] = useState([])
+    onSelectpage 
+}:Ipaginas): JSX.Element {
+    const [numeropaginas, setNumeropaginas] = useState<number[]>([])
     useEffect(() => {
         if (dataLength > 0) {
-            let auxilioPaginas = (dataLength / 12).toFixed(1) - 1
+            let auxilioPaginas = parseInt((dataLength / 12).toFixed(1)) - 1
             let arrNumeropaginas = []
             for (let i = 0; i < auxilioPaginas; i++) { arrNumeropaginas.push(i + 1) }
             setNumeropaginas(arrNumeropaginas)
         }
     }, [dataLength])
 
-    function styleAtivo(numeropagina) {
+    function styleAtivo(numeropagina:number) {
         let styleA = numeropagina === pagina ? "paginas__cada--ativa" : 'paginas__cada'
         return styleA
     }
-    function controlePagina(params) {
+    function controlePagina(params:number) {
         onSelectpage(params)
         setTimeout(() => {
             EventBus.dispatch("search", {})
