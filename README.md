@@ -5,7 +5,7 @@ Função:
 - Para facilicar essa procura há um campo de busca, tambem é pssivel navegar entre as paginas
 
 
-![Ilustrando](![image](https://user-images.githubusercontent.com/90703690/200433005-1f028fe2-3bcc-4bde-9f22-e000f5f376bf.png))
+![Ilustrando](https://user-images.githubusercontent.com/90703690/200433005-1f028fe2-3bcc-4bde-9f22-e000f5f376bf.png)
 
 ## 🚧 Em Desenvolvimento
 
