@@ -6,7 +6,7 @@ import { useState, useEffect } from 'react'
 import { Idata } from "./types/types";
 
 function App() {
-  const [data, setData] = useState<Idata[]>([])
+  const [data, setData] = useState<Idata[]|null>([])
   const [pagina, setPagina] = useState<number>(1)
   const [searchState, setSearchState] = useState<boolean>(false)
   const api = useApi()
@@ -22,6 +22,7 @@ function App() {
   }, [pagina]);
 
   async function dataFilter(filter: string) {
+    setData(null)
     let { pokedexArr, } = await api.pokeAPIsearch(filter)
     setSearchState(true)
     setData(pokedexArr)

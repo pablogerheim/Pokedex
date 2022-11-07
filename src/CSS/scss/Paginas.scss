@@ -16,9 +16,9 @@
         margin: 0%;
         background: rgb(255, 255, 255);
         color: rgb(129, 129, 129);
-        z-index: 3;
+        z-index: 4;
         &--ativa {
-            z-index: 3;
+            z-index: 4;
             @include for-phone-only {
                 padding: 1%;
                 margin: 1%;
@@ -39,6 +39,7 @@
             margin: 15px;
             background: url('../../Img/setaL.png') no-repeat bottom center scroll;
             background-size: cover;
+            z-index: 4;
         }
         &__proximo {
             border-radius: 100%;
@@ -47,6 +48,7 @@
             margin: 15px;
             background: url('../../Img/setaR.png') no-repeat bottom center scroll;
             background-size: cover;
+            z-index: 4;
         }
     }
 }

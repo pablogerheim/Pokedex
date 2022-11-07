@@ -10,7 +10,7 @@ export interface Icabecalho {
     dataFilter:any
 }
 export interface Icorpo {
-    dataProp:Idata[];
+    dataProp:Idata[]|null;
 }
 export interface Ipaginas {
     pagina:number;

@@ -4,31 +4,6 @@
   align-items: center;
   justify-content: space-between;
 }
-
-.card {
-	list-style: none;
-	padding: 40px;
-	color: #222;
-	text-align: center;
-	border-radius: 20px;
-	position: relative;
-  z-index: 1;
-}
-
-.card::after {
-  content: "";
-  display: block;
-  width: 44%;
-  height: 115%;
-  border-radius: 100%;
-  background-color: #fff;
-  opacity: .7;
-  position: absolute;
-  top: 12%;
-  left: -3%;
-}
-
-
 .cabecalho__overflow {
   display: inline-flex;
   flex-direction: row;
@@ -57,6 +32,7 @@
     width: 100%;
     padding: 10px 0px;
     justify-content: space-around;
+    margin-left: 1em;
   }
 }
 .cabecalho__ferramenta__titulo {
@@ -78,7 +54,7 @@
 }
 @media (max-width: 600px) {
   .cabecalho__procura {
-    width: 100%;
+    width: 90%;
   }
 }
 @media (min-width: 601px) and (max-width: 920px) {
@@ -95,12 +71,6 @@
     width: 90%;
   }
 }
-.cabecalho__procura__entrada::-moz-placeholder {
-  color: rgb(194, 192, 192);
-}
-.cabecalho__procura__entrada:-ms-input-placeholder {
-  color: rgb(194, 192, 192);
-}
 .cabecalho__procura__entrada::placeholder {
   color: rgb(194, 192, 192);
 }
@@ -116,6 +86,29 @@
   .cabecalho__procura__icone {
     padding: 8%;
   }
+}
+
+.card {
+  list-style: none;
+  padding: 40px;
+  color: #222;
+  text-align: center;
+  border-radius: 20px;
+  position: relative;
+  z-index: 1;
+}
+
+.card::after {
+  content: "";
+  display: block;
+  width: 44%;
+  height: 100%;
+  border-radius: 100%;
+  background-color: #fff;
+  opacity: 0.7;
+  position: absolute;
+  top: 5%;
+  left: -2%;
 }
 
 .principal {
@@ -154,7 +147,7 @@
   max-width: 100px;
   max-height: 135px;
   align-items: left;
-  z-index: 2;
+  z-index: 5;
 }
 .principal__cartao__titulo {
   font-size: 15px;
@@ -183,6 +176,7 @@
   display: flex;
   align-items: center;
   flex-direction: column;
+  margin-top: 100px;
 }
 
 .paginas {
@@ -196,7 +190,6 @@
   .paginas {
     width: 80%;
     margin: 0.5% 10%;
-
   }
 }
 .paginas__cada {
@@ -207,9 +200,10 @@
   margin: 0%;
   background: rgb(255, 255, 255);
   color: rgb(129, 129, 129);
-  z-index: 3;
+  z-index: 4;
 }
 .paginas__cada--ativa {
+  z-index: 4;
   border-radius: 100%;
   border: hidden;
   background: rgb(90, 38, 129);
@@ -232,6 +226,7 @@
   margin: 15px;
   background: url("../../Img/setaL.png") no-repeat bottom center scroll;
   background-size: cover;
+  z-index: 4;
 }
 .paginas__cada__proximo {
   border-radius: 100%;
@@ -240,6 +235,7 @@
   margin: 15px;
   background: url("../../Img/setaR.png") no-repeat bottom center scroll;
   background-size: cover;
+  z-index: 4;
 }
 
 .body {
@@ -254,4 +250,6 @@
   .body {
     padding: 5%;
   }
-}/*# sourceMappingURL=style.css.map */
+}
+
+/*# sourceMappingURL=style.css.map */

@@ -12,13 +12,13 @@
   content: "";
   display: block;
   width: 44%;
-  height: 115%;
+  height: 100%;
   border-radius: 100%;
   background-color: #fff;
   opacity: .7;
   position: absolute;
-  top: 12%;
-  left: -3%;
+  top: 5%;
+  left: -2%;
 }
 
 .principal {
@@ -37,7 +37,6 @@
         @include for-phone-only{
             margin:2% 4%;
         }
-
         display: flex;
         align-items: center;
         justify-content: space-around;
@@ -52,6 +51,7 @@
             max-width: 100px;
             max-height: 135px;
             align-items: left;
+            z-index: 5;
         }
 
         &__titulo {
@@ -86,4 +86,5 @@
     display: flex;
     align-items: center;
     flex-direction: column;
+    margin-top: 100px;
 }
