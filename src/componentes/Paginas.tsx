@@ -6,25 +6,22 @@ import EventBus from "../helper/EventBus"
 import { Ipaginas } from "../types/types";
 
 function Paginas({
-    dataLength = 1 ,
     pagina = 1,
-    onSelectpage 
-}:Ipaginas): JSX.Element {
+    onSelectpage
+}: Ipaginas): JSX.Element {
     const [numeropaginas, setNumeropaginas] = useState<number[]>([])
     useEffect(() => {
-        if (dataLength > 0) {
-            let auxilioPaginas = parseInt((dataLength / 12).toFixed(1)) - 1
-            let arrNumeropaginas = []
-            for (let i = 0; i < auxilioPaginas; i++) { arrNumeropaginas.push(i + 1) }
-            setNumeropaginas(arrNumeropaginas)
-        }
-    }, [dataLength])
+        let arrNumeropaginas = []
+        for (let i = 0; i < 54; i++) { arrNumeropaginas.push(i + 1) }
+        console.log(arrNumeropaginas)
+        setNumeropaginas(arrNumeropaginas)
+    }, [])
 
-    function styleAtivo(numeropagina:number) {
-        let styleA = numeropagina === pagina ? "paginas__cada--ativa" : 'paginas__cada'
-        return styleA
+    function styleAtivo(numeropagina: number) {
+        return numeropagina === pagina ? "paginas__cada--ativa" : 'paginas__cada'
     }
-    function controlePagina(params:number) {
+
+    function controlePagina(params: number) {
         onSelectpage(params)
         setTimeout(() => {
             EventBus.dispatch("search", {})
@@ -32,7 +29,7 @@ function Paginas({
     }
 
     function paginacao() {
-        if (dataLength <= 12) { return <div> <button className="paginas__cada--ativa">1</button></div> }
+        if (13 <= 12) { return <div> <button className="paginas__cada--ativa">1</button></div> }
         else if (numeropaginas.length <= 8) {
             return (<>
                 {numeropaginas.map(numeroPagina => {

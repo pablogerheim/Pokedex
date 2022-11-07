@@ -16,7 +16,9 @@
         margin: 0%;
         background: rgb(255, 255, 255);
         color: rgb(129, 129, 129);
+        z-index: 3;
         &--ativa {
+            z-index: 3;
             @include for-phone-only {
                 padding: 1%;
                 margin: 1%;

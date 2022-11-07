@@ -13,7 +13,6 @@ export interface Icorpo {
     dataProp:Idata[];
 }
 export interface Ipaginas {
-    dataLength:number;
     pagina:number;
     onSelectpage:Function;
 }

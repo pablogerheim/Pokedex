@@ -46,7 +46,7 @@ function Corpo({ dataProp }:Icorpo) {
           <div
             key={v4()}
             style={{ backgroundColor: bk_div() }}
-            className="principal__cartao"
+            className="principal__cartao card"
           >
             <img
               src={image}

@@ -4,6 +4,31 @@
   align-items: center;
   justify-content: space-between;
 }
+
+.card {
+	list-style: none;
+	padding: 40px;
+	color: #222;
+	text-align: center;
+	border-radius: 20px;
+	position: relative;
+  z-index: 1;
+}
+
+.card::after {
+  content: "";
+  display: block;
+  width: 44%;
+  height: 115%;
+  border-radius: 100%;
+  background-color: #fff;
+  opacity: .7;
+  position: absolute;
+  top: 12%;
+  left: -3%;
+}
+
+
 .cabecalho__overflow {
   display: inline-flex;
   flex-direction: row;
@@ -129,6 +154,7 @@
   max-width: 100px;
   max-height: 135px;
   align-items: left;
+  z-index: 2;
 }
 .principal__cartao__titulo {
   font-size: 15px;
@@ -170,6 +196,7 @@
   .paginas {
     width: 80%;
     margin: 0.5% 10%;
+
   }
 }
 .paginas__cada {
@@ -180,6 +207,7 @@
   margin: 0%;
   background: rgb(255, 255, 255);
   color: rgb(129, 129, 129);
+  z-index: 3;
 }
 .paginas__cada--ativa {
   border-radius: 100%;

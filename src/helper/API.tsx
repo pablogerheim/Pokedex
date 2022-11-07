@@ -1,7 +1,6 @@
 import axios from 'axios'
 import { Iurl, Iname, Idata } from "../types/types";
 
-let dataLength = 0
 export const useApi = () => ({
     pokeAPIpage: async (offset: number = 0) => {
         let pokedexArr = []
@@ -28,7 +27,7 @@ export const useApi = () => ({
         let pokedexArr: Idata[] = []
         let filterLength = 0
         if (serach === '') {
-            filterLength = dataLength
+            filterLength = 660
             pokedexArr = await api.pokeAPIpage(0)
         }
         else {
@@ -63,9 +62,7 @@ export const useApi = () => ({
     verifica: async (n: number = 1) => {
         let data = await fetch(`https://pokeapi.co/api/v2/pokemon-species/${n + 1}/`)
         return data.status
-    },
-    pokeAPIbase: () => {
-        dataLength = 672; return dataLength
     }
+    
 })
 const api = useApi()
