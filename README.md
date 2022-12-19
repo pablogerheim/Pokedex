@@ -37,4 +37,5 @@ No caso de clonar do Github - Node.js - https://nodejs.org/en/
 * [Axios](https://axios-http.com/ptbr/docs/intro) - API
 * [GitHub](https://github.com/) - Software
 * [Docker](https://www.docker.com/) - Software 
+* [Vercel](https://vercel.com) - Hospedagem
 
